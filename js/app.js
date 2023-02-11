@@ -84,7 +84,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let firstArrSum = sum(testArray[0],testArray[1])[0];
   let myArrSum = sum(firstArrSum,testArray[2])[0];
   let arrStr = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${myArrSum} is their sum.`;
-  
+
   return [myArrSum, arrStr];
 }
 
@@ -138,10 +138,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let myDynAns = 1;
+  for(let i = 0; i < dynamicArray.length; i++){
+    myDynAns = multiply(myDynAns, dynamicArray[i])[0];
+  }
+  let dynStr = `The numbers ${dynamicArray} have a product of ${myDynAns}.`;
+  return [myDynAns, dynStr];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
