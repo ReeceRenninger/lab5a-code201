@@ -81,9 +81,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let firstArrSum = sum(testArray[0],testArray[1])[0];
-  let myArrSum = sum(firstArrSum,testArray[2])[0];
-  let arrStr = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${myArrSum} is their sum.`;
+  let firstArrSum = sum(sumArr[0],sumArr[1])[0];
+  let myArrSum = sum(firstArrSum,sumArr[2])[0];
+  let arrStr = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${myArrSum} is their sum.`;
 
   return [myArrSum, arrStr];
 }
@@ -106,9 +106,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let firstArrMultiply = multiply(testArray[0],testArray[1])[0];
-  let myArrProduct = multiply(firstArrMultiply,testArray[2])[0];
-  let arrStrTwo = `The numbers ${testArray} have a product of ${myArrProduct}.`;
+  let firstArrMultiply = multiply(multArr[0],multArr[1])[0];
+  let myArrProduct = multiply(firstArrMultiply,multArr[2])[0];
+  let arrStrTwo = `The numbers ${multArr} have a product of ${myArrProduct}.`;
 
   return[myArrProduct, arrStrTwo];
 }
